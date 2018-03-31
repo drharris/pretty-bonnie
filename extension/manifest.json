@@ -1,6 +1,8 @@
 {
     "name": "Pretty Bonnie",
-    "version": "0.1",
+    "short_name": "PrettyBonnie",
+    "version": "0.2",
+    "manifest_version": 2,
     "description": "Make Bonnie outputs Pretty.",
     "icons": { "48": "icon48.png", "128": "icon128.png" },
     "content_scripts": [{
@@ -11,5 +13,5 @@
     "permissions": [
         "https://bonnie.udacity.com/student/*"
     ],
-    "manifest_version": 2
+    "author": "David Harris"
   }

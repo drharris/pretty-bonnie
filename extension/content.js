@@ -24,20 +24,35 @@ function makeBonniePretty(e) {
     {
         // make panel heading
         var panel = $("<div class='panel'></div>");
-        var panelHeading = $("<div data-toggle='collapse' class='panel-heading'></div>");
+        var panelHeading = $("<div data-toggle='collapse' class='panel-heading accordion-toggle collapsed'></div>");
         var panelTitle = $("<h4 class='panel-title'></h4>");
         panelHeading.attr("data-target", "#collapse" + test);
+        var panelTitleGlyph = $("<span class='glyphicon' aria-hidden='true'></span>");
+        panelTitleGlyph.attr("aria-label", tests[test].output.passfail);
+        switch(String(tests[test].output.passfail))
+        {
+            case "passed":
+                panel.addClass("panel-success");
+                panelTitleGlyph.addClass("glyphicon-ok-circle");
+                break;
+            case "failed":
+                panel.addClass("panel-danger");
+                panelTitleGlyph.addClass("glyphicon-remove-circle");
+                break;
+            case "partial":
+                panel.addClass("panel-warning");
+                panelTitleGlyph.addClass("glyphicon-exclamation-sign");
+                break;
+            default:
+                panel.addClass("panel-dark");
+                panelTitleGlyph.addClass("glyphicon-question-sign");
+                break;
+        }
         panelTitle.text(tests[test].description);
+        panelTitle.prepend(panelTitleGlyph);
         panelHeading.append(panelTitle);
         panel.append(panelHeading);
-        if(tests[test].output.passfail == "passed")
-            panel.addClass("panel-success");
-        else if(tests[test].output.passfail == "failed")
-            panel.addClass("panel-danger");
-        else if(tests[test].output.passfail == "partial")
-            panel.addClass("panel-warning");
-        else
-            panel.addClass("panel-dark");
+
         // make panel content
         var collapseDiv = $("<div class='panel-collapse collapse'></div>");
         collapseDiv.attr("id", "collapse"+test);
