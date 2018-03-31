@@ -2,6 +2,8 @@
 
 A Chrome extension for making Bonnie output prettier.
 
+![PrettyBonnie screenshot](sshot.png);
+
 ## Installation
 
 https://chrome.google.com/webstore/detail/pretty-bonnie/pgmdghgcpijfocohpmljfcimlenibhgl
