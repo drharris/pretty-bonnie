@@ -2,13 +2,14 @@
     "name": "Pretty Bonnie",
     "version": "0.1",
     "description": "Make Bonnie outputs Pretty.",
+    "icons": { "48": "icon48.png", "128": "icon128.png" },
     "content_scripts": [{
         "css": ["styles.css"],
         "js": ["jquery.js" , "content.js"],
         "matches": ["https://bonnie.udacity.com/student/*"]
     }],
     "permissions": [
-        "https://bonnie.udacity.com/student/*", "tabs", "webNavigation"
+        "https://bonnie.udacity.com/student/*"
     ],
     "manifest_version": 2
   }
