@@ -12,21 +12,20 @@
     color:#eee;
 }
 
-h4 span.glyphicon {
-    margin-right:5px;
-    /* font-size: 125%;*/
-}
-
-.panel-heading .accordion-toggle h4:after {
+.panel-heading h4:after {
     /* symbol for "opening" panels */
     font-family: 'Glyphicons Halflings';  /* essential for enabling glyphicon */
     content: "\e114";    /* adjust as needed, taken from bootstrap.css */
     float: right;        /* adjust as needed */
     color: grey;         /* adjust as needed */
 }
-.panel-heading .accordion-toggle.collapsed h4:after {
+.panel-heading.collapsed h4:after {
     /* symbol for "collapsed" panels */
     content: "\e080";    /* adjust as needed, taken from bootstrap.css */
+}
+
+h4 span.glyphicon {
+    margin-right:5px;
 }
 
 .row{
