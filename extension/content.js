@@ -7,19 +7,21 @@ $(window).on('popstate',function(event) {
 $(document).bind("DOMSubtreeModified", function() {
     if(didit) return;
     setTimeout(function() {makeBonniePretty(this);}, 250);
-    didit = true;
 });
 
 window.addEventListener("load", makeBonniePretty, false);
 
 function makeBonniePretty(e) {
+    if(didit) return;
     var list = jQuery("<div class='accordion panel-group'></div>");
     if(!document.getElementsByTagName("pre")[1]) {
         didit = false;
         return;
     }
+    didit = true; // hopefully
     var test_json = document.getElementsByTagName("pre")[1].textContent;
     var tests = JSON.parse(test_json).tests;
+    //var tests = cs6476_json.tests
     for(var test in tests)
     {
         // make panel heading

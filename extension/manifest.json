@@ -7,7 +7,7 @@
     "icons": { "48": "icon48.png", "128": "icon128.png" },
     "content_scripts": [{
         "css": ["styles.css"],
-        "js": ["jquery.js" , "content.js"],
+        "js": ["jquery.js" , "sampleJson.js", "content.js"],
         "matches": ["https://bonnie.udacity.com/student/*"]
     }],
     "permissions": [
