@@ -1,0 +1,14 @@
+{
+    "name": "Pretty Bonnie",
+    "version": "0.1",
+    "description": "Make Bonnie outputs Pretty.",
+    "content_scripts": [{
+        "css": ["styles.css"],
+        "js": ["jquery.js" , "content.js"],
+        "matches": ["https://bonnie.udacity.com/student/*"]
+    }],
+    "permissions": [
+        "https://bonnie.udacity.com/student/*", "tabs", "webNavigation"
+    ],
+    "manifest_version": 2
+  }

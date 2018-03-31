@@ -1,0 +1,48 @@
+
+.bonnie-console {
+    font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+    overflow-x: auto;
+    overflow-wrap: normal;
+    word-wrap: normal;
+    white-space: pre-wrap;
+    max-height: 300px;
+    tab-size: 3;
+    background-color: rgb(35, 45, 75);
+    color:#eee;
+}
+
+.row{
+    margin-top:40px;
+    padding: 0 10px;
+}
+
+.clickable{
+    cursor: pointer;   
+}
+
+.panel-heading span {
+	margin-top: -20px;
+	font-size: 15px;
+}
+
+.table > thead > tr > th{
+    border-right: 1px solid #ddd;
+    border-bottom:0;
+}
+
+.table > tbody > tr > td{
+    border-right: 1px solid #ddd;
+}
+
+.table > thead > tr > th:last-of-type {
+    border-right: 0px;
+}
+
+.table > tbody > tr > td:last-of-type {
+    border-right: 0px;
+}
+
+.panel-body {
+    padding: 0;
+}
+.panel-body > .table{margin-bottom:0px;}
