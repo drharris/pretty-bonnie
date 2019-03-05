@@ -21,6 +21,17 @@ function makeBonniePretty(e) {
     didit = true; // hopefully
     var test_json = document.getElementsByTagName("pre")[1].textContent;
     var tests = JSON.parse(test_json).tests;
+    // add wrap button for json
+    var pre_elem = $("pre:nth-of-type(2)");
+    var wrap_button = $("<button type='button' class='btn btn-primary pull-right' data-toggle='button' aria-pressed='false' autocomplete='off'>Wrap Text</button>");
+    wrap_button.on("click", function(e) {
+        pre_elem.toggleClass("wrapped");
+    });
+    var heading = $("h4:nth-of-type(2)");//document.getElementsByTagName("h4")[1];
+    heading.innerHTML = "<span>" + heading.innerText  + "</span>";
+    heading.append(wrap_button);
+    heading.addClass("feedback");
+    //wrap_button.insertBefore(pre_elem);
     //var tests = cs6476_json.tests
     for(var test in tests)
     {
@@ -29,7 +40,7 @@ function makeBonniePretty(e) {
         var panelHeading = $("<div data-toggle='collapse' class='panel-heading accordion-toggle collapsed'></div>");
         var panelTitle = $("<h4 class='panel-title'></h4>");
         panelHeading.attr("data-target", "#collapse" + test);
-        var panelTitleGlyph = $("<span class='glyphicon' aria-hidden='true'></span>");
+        var panelTitleGlyph = $("<span class='glyphicon' aria-hidden='true' style='font-size:24px;margin-top:-5px;'></span>");
         panelTitleGlyph.attr("aria-label", tests[test].output.passfail);
         switch(String(tests[test].output.passfail))
         {

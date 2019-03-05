@@ -1,4 +1,4 @@
-@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css");
+/*@import url("//netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-glyphicons.css");*/
 
 .bonnie-console {
     font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
@@ -26,6 +26,7 @@
 
 h4 span.glyphicon {
     margin-right:5px;
+    vertical-align: middle;
 }
 
 .row{
@@ -63,3 +64,15 @@ h4 span.glyphicon {
     padding: 0;
 }
 .panel-body > .table{margin-bottom:0px;}
+
+pre.wrapped {
+    white-space: pre-wrap;       /* css-3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+h4.feedback {
+    line-height: 1.6em;
+}
